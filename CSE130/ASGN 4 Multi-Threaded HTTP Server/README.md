@@ -1,0 +1,3 @@
+#Assignment 4 directory
+
+This project will combine Assignments 2 and 3 to build a multi-threaded HTTP server. Namely, your server will add a thread-safe queue and some rwlocks (Asgn 3) to an HTTP server (Asgn 2) so that the server can serve multiple clients simultaneously. Think: what performance metric does this form of multi-threading improve, latency or throughput. While your server should process multiple clients simultaneously, it must ensure that its responses conform to a coherent and atomic linearization of the client requests. In effect, this means that an outside observer could not differentiate the behavior of your server from a server that uses only a single thread. Your server must create an audit log that identifies the linearization of your server 

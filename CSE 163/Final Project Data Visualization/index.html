@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Testing</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 style="text-align: center; color: steelblue">
+        <bold> Animal Testing </bold>
+      </h1>
+      <!-- Insert a right aligned image of foul.jpeg -->
+      <!-- Create a div with style flex row -->
+      <div class="header-row">
+        <div>
+          <img
+            src="images/koala.jpeg"
+            alt="Foul"
+            style="float: left; width: 200px; border-radius: 50%"
+          />
+        </div>
+        <div style="width: 70%">
+          <p>
+            Australia is one of the most biodiverse countries in the world. Due
+            to its rich number of animal species, our team was curious as to
+            what animal testing occurs in Australia and why. When a state in
+            this visualization is clicked on, a pie chart for that state for
+            each of the following topics of animal testing will appear: Types of
+            animals tested on, purposes of testing, and severities of testing.
+            The first pie chart displays the number of each animal tested on.
+            The next pie chart shows the number of animals used for different
+            testing purposes. The final pie chart shows the number of animals
+            used for the different types of testing severity. There is a slider
+            at the top of the screen to choose what year you would like to see.
+            This visualization not only makes it easy to compare animal testing
+            betweeneach state in Australia, but also gives a richer picture of
+            why countries decide to test on animals.
+          </p>
+        </div>
+        <div>
+          <img
+            src="images/dingo.webp"
+            alt="Australia"
+            style="width: 200px; float: right; border-radius: 50%"
+          />
+        </div>
+      </div>
+      <hr style="width: 100%; margin-bottom: 50px" />
+      <div class="map-pie">
+        <!-- <button onclick="togglecolor()">Toggle Color</button> -->
+        <!-- <button onclick="toggleborder()">Toggle Border</button> -->
+        <h1>Map of Australia</h1>
+        <button onclick="togglePieChart()">Australia Data</button>
+
+        <div class="slider">
+          <div class="col-sm"><div id="slider-time"></div></div>
+        </div>
+        <svg id="dataviz"></svg>
+
+        <div id="piecharts" class="piecharts"></div>
+      </div>
+      <div class="tooltip" style="opacity: 0"></div>
+      <!-- Create a button that that calls the togglecolor function -->
+      <div class="credits">
+        <!-- Bold font in a span -->
+        <div style="text-align: center">
+          <span style="font-weight: bold">Created by:</span>
+          <br />
+          <br />
+          Rahul Vaidun (rvaidun@ucsc.edu) <br />
+          Anya Rajan (arajan2@ucsc.edu) <br />
+          Sakthi Karimanal (skariman@ucsc.edu) <br />
+          Shomili Madabhavi (smadabha@ucsc.edu) <br />
+          <br />
+          <br />
+
+          <a href="https://rahulvaidun.dev/CSE-163-Final-Project/"
+            >Visualization link</a
+          >
+          <br />
+          <br />
+          <span style="font-weight: bold">Designed for:</span>
+          <br />
+          <br />
+          CSE 163: Data Visualization, Fall 2022
+          <br />
+          <br />
+        </div>
+        <div class="credits-under">
+          <div style="text-align: center">
+            <span style="font-weight: bold">Files:</span>
+            <br />
+            <br />
+            <a href="https://github.com/rvaidun/CSE-163-Final-Project"
+              >Github
+            </a>
+          </div>
+          <div style="text-align: center">
+            <span style="font-weight: bold">Visual Sources:</span>
+            <br />
+            <br />
+            <a href="http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922">
+              Basic US State Map
+            </a>
+            <br />
+            <br />
+            <a href="https://d3-graph-gallery.com/pie.html"> D3 Pie Chart </a>
+            <br />
+            <br />
+            <a href="https://d3-graph-gallery.com/graph/donut_label.html">
+              D3 Pie Chart with labels</a
+            >
+            <br />
+            <br />
+            <a
+              href="https://bl.ocks.org/johnwalley/e1d256b81e51da68f7feb632a53c3518"
+            >
+              Slider</a
+            >
+          </div>
+          <div style="text-align: center">
+            <span style="font-weight: bold">Data Sources:</span>
+            <br />
+            <br />
+            <a href="https://www.humaneresearch.org.au/statistics/"
+              >Animal Testing in Australia</a
+            >
+            <br />
+            <br />
+            <a href="https://github.com/tonywr71/GeoJson-Data">GeoJSON Data</a>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-This folder is for CSE 107- Probability and Statistics
+# CSE 107 (Probability and Statistics) Project Repository
